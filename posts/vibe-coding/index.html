@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Swaroop Gadiyaram - Blog on AI, Machine Learning, and Technology">
-    <title>Blog | Swaroop Gadiyaram</title>
+    <meta name="description" content="The dark side of AI coding: Dopamine, speed, and why it feels like an addiction.">
+    <title>Vibe Coding is a Drug | Swaroop Gadiyaram</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <script>
         (function () {
             const saved = localStorage.getItem('theme');
@@ -26,11 +26,11 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Swaroop Gadiyaram</a>
+            <a href="../../index.html" class="nav-logo">Swaroop Gadiyaram</a>
             <div class="nav-right">
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">About</a></li>
-                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="../../index.html" class="nav-link">About</a></li>
+                    <li><a href="../../blog.html" class="nav-link">Blog</a></li>
                 </ul>
                 <button class="theme-toggle" aria-label="Toggle theme">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -89,41 +89,62 @@
         </aside>
 
         <main class="main-content">
-            <header class="page-header">
-                <h2 class="page-title">Blog</h2>
-                <p class="page-subtitle">Thoughts on Building intelligent AI systems, and all things random.</p>
-            </header>
-
-            <div class="blog-list">
-                <article class="blog-item">
-                    <div class="blog-item-meta">
-                        <span class="blog-item-date">February 2026</span>
-                        <span class="blog-item-category">Data Analysis</span>
-                    </div>
-                    <h3 class="blog-item-title">
-                        <a href="posts/traffic-analysis/">My Commute is a Battlefield: Analyzing Bay Area Traffic
-                            Accidents</a>
-                    </h3>
-                    <p class="blog-item-excerpt">
-                        A data-driven exploration of when and where crashes happen on the 101 & 237 corridor.
-                    </p>
-                </article>
-
-                <article class="blog-item">
+            <article class="blog-post-content">
+                <header class="post-header">
+                    <a href="../../blog.html" class="back-link">← Back to Blog</a>
                     <div class="blog-item-meta">
                         <span class="blog-item-date">February 2026</span>
                         <span class="blog-item-category">Thought Piece</span>
                     </div>
-                    <h3 class="blog-item-title">
-                        <a href="posts/vibe-coding/">Vibe Coding is a Drug</a>
-                    </h3>
-                    <p class="blog-item-excerpt">
-                        Why the dopamine hit of AI-generated code is addictive, powerful, and borderline unhealthy.
-                    </p>
-                </article>
+                    <h1 class="post-title">Vibe Coding is a Drug</h1>
+                    <p class="post-description">Why the dopamine hit of AI-generated code is addictive, powerful, and
+                        borderline unhealthy.</p>
+                </header>
 
-                <!-- Reference post template (file: posts/reference.html) -->
-            </div>
+                <div class="post-body">
+                    <p>It starts innocently enough. You open your IDE, type a vague instruction like "make me a
+                        dashboard," and three seconds later, it appears. A full UI. Charts. Dropdowns. It works.</p>
+
+                    <p>That feeling? That's not just productivity. <strong>That's dopamine.</strong></p>
+
+                    <p>We need to talk about "Vibe Coding."</p>
+
+                    <h2>The Speed Trap</h2>
+                    <p>In the old world, building a feature took days. You planned, you read documentation, you debugged
+                        specific error messages. The reward—the working feature—came after a long period of sustained
+                        effort.</p>
+
+                    <p>With AI, the reward loop has tightened from days to seconds. It's a slot machine. Pull the lever
+                        (write a prompt), get a prize (working code). If it doesn't work? Pull the lever again. "Fix the
+                        bug." "Try a different library."</p>
+
+                    <p>This creates a hyper-accelerated feedback loop that feels incredibly powerful. I can build three
+                        apps in a weekend! I can refactor an entire codebase before lunch! I am a 10x engineer!</p>
+
+                    <p>But am I? Or am I just a dopamine junkie chasing the next "Code Generated" notification?</p>
+
+                    <h2>The "Just One More Prompt" Syndrome</h2>
+                    <p>I found myself coding at 2 AM last night. not because I had a deadline, but because I was in a
+                        flow state that felt artificial. I wasn't solving deep algorithmic problems. I was directing a
+                        symphony of agents, watching files appear and tests pass.</p>
+
+                    <p>It's bordering on unhealthy. The friction of coding—the thinking part—was the natural brake. It
+                        slowed you down. It forced you to take breaks. Without that friction, you can consume code
+                        generation for hours without realizing you haven't stood up, eaten, or really <em>thought</em>
+                        about the architecture you're building.</p>
+
+                    <h2>The Illusion of Competence</h2>
+                    <p>There's a danger here. We feel like wizards, but we might be becoming button-mashing operators.
+                        When the AI gets stuck, really stuck, the withdrawal hits. The frustration is sharper because
+                        we've been conditioned to expect instant results.</p>
+
+                    <p>Vibe coding is fun. It's the future. It's undeniably productive. But let's be honest with
+                        ourselves: it's also a little bit of a drug. And like any powerful stimulant, we need to learn
+                        how to use it without losing ourselves in the rush.</p>
+
+                    <p>Now, if you'll excuse me, I have a sudden urge to prompt an entire mobile app into existence.</p>
+                </div>
+            </article>
         </main>
     </div>
 
@@ -139,8 +160,7 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>
