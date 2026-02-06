@@ -1,0 +1,71 @@
+---
+layout: default
+title: Blog
+description: Thoughts on AI, Machine Learning, and Technology
+---
+
+<section class="blog-header">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Thoughts & Insights</span>
+            <h1 class="section-title">Blog</h1>
+            <p class="blog-intro">
+                Writing about AI, Machine Learning, LLMs, and building intelligent systems.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section blog-posts">
+    <div class="container">
+        <div class="blog-grid">
+            {% for post in site.posts %}
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <div class="blog-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-date">{{ post.date | date: "%b %d, %Y" }}</span>
+                        {% if post.category %}
+                        <span class="blog-category">{{ post.category }}</span>
+                        {% endif %}
+                    </div>
+                    <h2 class="blog-title">{{ post.title }}</h2>
+                    <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                    <a href="{{ post.url | relative_url }}" class="blog-read-more">
+                        <span>Read More</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if site.posts.size == 0 %}
+        <div class="no-posts">
+            <p>No posts yet. Check back soon!</p>
+        </div>
+        {% endif %}
+
+        <div class="newsletter-section">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Get notified when I publish new articles on AI, ML, and technology.</p>
+            </div>
+            <a href="mailto:swaroop.g7@gmail.com?subject=Blog%20Newsletter%20Signup" class="btn btn-primary">
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </div>
+</section>

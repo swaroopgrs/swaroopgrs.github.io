@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <script>
+        // Initialize theme before page renders to prevent flash
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (!prefersDark) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ '/' | relative_url }}" class="nav-logo">SG</a>
+            <ul class="nav-menu">
+                <li><a href="{{ '/#about' | relative_url }}" class="nav-link">About</a></li>
+                <li><a href="{{ '/#skills' | relative_url }}" class="nav-link">Skills</a></li>
+                <li><a href="{{ '/#projects' | relative_url }}" class="nav-link">Projects</a></li>
+                <li><a href="{{ '/blog' | relative_url }}" class="nav-link">Blog</a></li>
+                <li><a href="{{ '/#contact' | relative_url }}" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    {{ content }}
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 {{ site.author }}. Built with ❤️</p>
+                <div class="footer-links">
+                    <a href="https://github.com/swaroopgrs" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/swaroopgadiyaram/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=EEFl0e4AAAAJ" target="_blank"
+                        rel="noopener">Scholar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+
+</html>
