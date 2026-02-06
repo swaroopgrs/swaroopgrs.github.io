@@ -18,3 +18,18 @@ npm-debug.log*
 # Local dev
 .env
 .env.local
+
+# Data files (too large for git)
+*.csv
+*.xlsx
+*.json
+posts/*/analysis/data/
+
+# Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+.venv-dev/
