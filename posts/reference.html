@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Swaroop Gadiyaram - Applied AI/ML Director at JPMorganChase">
-    <title>Swaroop Gadiyaram</title>
+    <meta name="description"
+        content="A deep dive into building and optimizing Retrieval Augmented Generation systems for enterprise applications.">
+    <title>Understanding RAG Pipelines in Production | Swaroop Gadiyaram</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <script>
         (function () {
             const saved = localStorage.getItem('theme');
@@ -26,11 +27,11 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Swaroop Gadiyaram</a>
+            <a href="../index.html" class="nav-logo">Swaroop Gadiyaram</a>
             <div class="nav-right">
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">About</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="../index.html" class="nav-link">About</a></li>
+                    <li><a href="../blog.html" class="nav-link">Blog</a></li>
                 </ul>
                 <button class="theme-toggle" aria-label="Toggle theme">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -89,52 +90,88 @@
         </aside>
 
         <main class="main-content">
-            <header class="page-header">
-                <h2 class="page-title">About</h2>
-            </header>
+            <article class="blog-post-content">
+                <header class="post-header">
+                    <a href="../blog.html" class="back-link">← Back to Blog</a>
+                    <div class="blog-item-meta">
+                        <span class="blog-item-date">February 5, 2026</span>
+                        <span class="blog-item-category">AI/ML</span>
+                    </div>
+                    <h1 class="post-title">Understanding RAG Pipelines in Production</h1>
+                    <p class="post-description">A deep dive into building and optimizing Retrieval Augmented Generation
+                        systems for enterprise applications.</p>
+                </header>
 
-            <div class="about-content">
-                <p class="lead">
-                    Executive Director at JPMorganChase's <a
-                        href="https://www.jpmorganchase.com/about/technology/research/machine-learning"
-                        target="_blank">Machine Learning Center of Excellence</a>. Currently working on <a
-                        href="https://www.jpmorganchase.com/about/technology/news/llmsuite-ab-award" target="_blank">LLM
-                        Suite</a>, LLM agents, and multi-agent systems. Based in San Jose.
-                </p>
+                <div class="post-body">
+                    <p>This is a sample blog post to show you how easy it is to write content!</p>
 
-                <p>
-                    Previously at Twitter. M.S. in Electrical and Computer Engineering from UC San Diego.
-                </p>
+                    <h2>How to Write Blog Posts</h2>
+                    <p>For this static site, you can create new blog posts by:</p>
+                    <ol>
+                        <li>Creating a new HTML file (copy this one as a template)</li>
+                        <li>Updating the content with your writing</li>
+                        <li>Adding a link to it from blog.html</li>
+                    </ol>
 
-                <div class="about-section">
-                    <h2>Expertise</h2>
+                    <h2>What is RAG?</h2>
+                    <p>Retrieval Augmented Generation (RAG) is a technique that combines the power of large language
+                        models
+                        with external knowledge retrieval. Instead of relying solely on the knowledge encoded in model
+                        weights, RAG systems can:</p>
                     <ul>
-                        <li>LLMs & Multi-Agent Systems</li>
-                        <li>Deep Learning & NLP</li>
-                        <li>MLOps & Production ML</li>
-                        <li>Software Architecture</li>
+                        <li>Fetch relevant documents from a knowledge base</li>
+                        <li>Use retrieved context to generate more accurate responses</li>
+                        <li>Provide citations and sources for generated content</li>
+                        <li>Stay up-to-date without retraining</li>
                     </ul>
-                </div>
 
-                <!-- Publications section (commented out for now)
-                <div class="about-section">
-                    <h2>Publications</h2>
-                    <ul>
-                        <li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IxS5at4AAAAJ&citation_for_view=IxS5at4AAAAJ:2osOgNQ5qMEC"
-                                target="_blank">Optimizing LLM-based Retrieval Augmented Generation Pipelines in the
-                                Financial Domain</a> — NAACL 2024 <span class="citation-count">(31 citations)</span>
-                        </li>
-                        <li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IxS5at4AAAAJ&citation_for_view=IxS5at4AAAAJ:9yKSN-GCB0IC"
-                                target="_blank">A Realtime, Open-Source Speech-Processing Platform for Research in
-                                Hearing Loss Compensation</a> — Asilomar Conference <span class="citation-count">(14
-                                citations)</span></li>
-                        <li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IxS5at4AAAAJ&citation_for_view=IxS5at4AAAAJ:IjCSPb-OGe4C"
-                                target="_blank">Efficient SQA from Long Audio Contexts: A Policy-driven Approach</a>
-                            <span class="citation-count">(1 citation)</span></li>
-                    </ul>
+                    <h2>Key Components</h2>
+                    <p>A production RAG pipeline typically includes:</p>
+
+                    <h3>1. Document Processing</h3>
+                    <p>Converting raw documents into chunks that can be efficiently retrieved. This involves text
+                        extraction, chunking strategies, and metadata extraction.</p>
+
+                    <h3>2. Embedding Generation</h3>
+                    <p>Creating vector representations of text chunks using embedding models. The choice of embedding
+                        model
+                        significantly impacts retrieval quality.</p>
+
+                    <h3>3. Vector Storage</h3>
+                    <p>Storing embeddings in a vector database for efficient similarity search. Popular options include
+                        Pinecone, Weaviate, and pgvector.</p>
+
+                    <h3>4. Retrieval Strategy</h3>
+                    <p>Determining how to find the most relevant chunks for a given query. This may involve hybrid
+                        search,
+                        reranking, and query expansion.</p>
+
+                    <h2>Code Example</h2>
+                    <p>Here's a simple example of a RAG retrieval function:</p>
+                    <pre><code>def retrieve_context(query: str, top_k: int = 5):
+    # Generate query embedding
+    query_embedding = embedding_model.encode(query)
+    
+    # Search vector store
+    results = vector_store.search(
+        query_embedding, 
+        top_k=top_k
+    )
+    
+    # Return retrieved documents
+    return [doc.text for doc in results]</code></pre>
+
+                    <h2>Conclusion</h2>
+                    <p>Building effective RAG systems requires careful attention to each component of the pipeline. In
+                        future posts, I'll dive deeper into specific optimization techniques we've developed at JPMorgan
+                        for
+                        financial domain applications.</p>
+
+                    <hr>
+
+                    <p>Thanks for reading! Feel free to reach out if you have questions about RAG implementations.</p>
                 </div>
-                -->
-            </div>
+            </article>
         </main>
     </div>
 
@@ -150,8 +187,7 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
