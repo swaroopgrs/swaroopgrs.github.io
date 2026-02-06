@@ -1,29 +1,29 @@
 # AI Agent Instructions
 
-Personal website for Swaroop Gadiyaram - Applied AI/ML Director at JPMorganChase.
+Personal website for Swaroop Gadiyaram - Executive Director at JPMorganChase's Machine Learning Center of Excellence.
 
 ## Structure
 
 ```
-index.html      # About page (main)
-blog.html       # Blog listing
-posts/          # Blog post files
-  reference.html  # Template for new posts
-css/styles.css  # All styles
-js/script.js    # Theme toggle
+index.html          # About page (main)
+blog.html           # Blog listing  
+posts/              # Blog post files
+  reference.html    # Template for new posts
+css/styles.css      # All styles
+js/script.js        # Theme toggle & nav
 ```
 
 ## Key Files
 
-- **index.html**: About page with bio, expertise
-- **blog.html**: Blog listing (currently "coming soon")
-- **posts/reference.html**: Blog post template - copy this for new posts
+- **index.html** — About page with bio, expertise section
+- **blog.html** — Blog listing (currently empty)
+- **posts/reference.html** — Blog post template
 
 ## Adding Blog Posts
 
 1. Copy `posts/reference.html` to `posts/new-post.html`
-2. Update content, title, meta
-3. Add entry to `blog.html` blog-list div:
+2. Update title, meta, content
+3. Add entry to `blog.html`:
 ```html
 <article class="blog-item">
     <div class="blog-item-meta">
@@ -37,11 +37,11 @@ js/script.js    # Theme toggle
 </article>
 ```
 
-## Design System
+## Design
 
-- CSS variables in `:root` for colors/spacing
-- Light/dark theme via `data-theme` attribute
-- Academicpages-style layout: sidebar + main content
+- Academicpages-style: left sidebar + main content
+- CSS variables in `:root` for theming
+- Light/dark toggle via `data-theme` attribute
 - Responsive: sidebar stacks on mobile
 
 ## Deployment
